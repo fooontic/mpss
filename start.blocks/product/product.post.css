@@ -1,7 +1,0 @@
-.product {
-    &__footer {
-        width: auto;
-        margin: var(--space-xl);
-        background: var(--color-bg-default);
-    }
-}
