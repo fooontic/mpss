@@ -1,0 +1,16 @@
+.header {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--color-bg-default);
+	border-bottom: 1px solid var(--color-bg-border);
+	--color-link: var(--color-typo-primary);
+
+	&__left-side, &__right-side {
+		display: flex;
+		align-items: center;
+	}
+}

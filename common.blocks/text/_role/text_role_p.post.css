@@ -1,0 +1,13 @@
+.text_role_p {
+	font-size: var(--size-typo-m);
+	line-height: var(--line-height-typo-m);
+	color: var(--color-typo-primary);
+
+	&:not(:last-child) {
+		margin-bottom: var(--space-l);
+	}
+
+	&:not(:first-child) {
+		margin-top: var(--space-l);
+	}
+}

@@ -1,0 +1,8 @@
+.text_role_h1 {
+	font-size: var(--size-typo-2xl);
+	line-height: var(--line-height-typo-s);
+	color: var(--color-typo-primary);
+	font-weight: bold;
+	margin-bottom: var(--space-2xl);
+	margin-top: 0;
+}

@@ -1,0 +1,2 @@
+block('icon').mod('name', 'strikethrough').mod('size', 's')({content: { html: '<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M7 14h2v-4h-2v4zm-4-12v2h4v2h2v-2h4v-2h-10zm-1 7h12v-2h-12v2z"/></svg>' }});
+block('icon').mod('name', 'strikethrough').mod('size', 'm')({content: { html: '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M10 19h4v-3h-4v3zm-5-15v3h5v3h4v-3h5v-3h-14zm-2 10h18v-2h-18v2z"/></svg>' }});

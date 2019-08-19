@@ -1,0 +1,2 @@
+block('icon').mod('name', 'dot').mod('size', 's')({content: { html: '<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><rect x="6" y="6" width="4" height="4" rx="2"/></svg>' }});
+// block('icon').mod('name', 'dot').mod('size', 'm')({content: { html: '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 8l-6 6 1.41 1.41 4.59-4.58 4.59 4.58 1.41-1.41-6-6z"/></svg>' }});

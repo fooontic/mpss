@@ -1,0 +1,3 @@
+.avatar_status_away .avatar__photo {
+	box-shadow: inset 0 0 0 1px var(--color-bg-default), 0 0 0 2px var(--color-bg-warning);
+}
