@@ -1,2 +1,0 @@
-block('icon').mod('name', 'comment').mod('size', 's')({content: { html: '<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M14 11c0 .552-.447 1-.999 1h-8.835l-2.167 2v-10.004c0-.552.448-.996 1-.996h10c.552 0 1 .448 1 1v7z"/></svg>' }});
-block('icon').mod('name', 'comment').mod('size', 'm')({content: { html: '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M20 2h-16c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2v-12c0-1.1-.9-2-2-2z"/></svg>' }});

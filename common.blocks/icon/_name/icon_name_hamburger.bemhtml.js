@@ -1,2 +1,0 @@
-block('icon').mod('name', 'hamburger').mod('size', 's')({content: { html: '<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M14 5h-12v-2h12v2zM14 9h-12v-2h12v2zM2 13h12v-2h-12v2z"/></svg>' }});
-block('icon').mod('name', 'hamburger').mod('size', 'm')({content: { html: '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M3 18h18v-2h-18v2zm0-5h18v-2h-18v2zm0-7v2h18v-2h-18z"/></svg>' }});

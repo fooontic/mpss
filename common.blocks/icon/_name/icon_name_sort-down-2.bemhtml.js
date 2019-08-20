@@ -1,3 +1,0 @@
-block('icon').mod('name', 'sort-down-2').mod('size', 'xs')({content: { html: '<svg width="11" height="11" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M10 2v1h-9v-1h9zM8 5v1h-5v-1h5zM7 9v-1h-3v1h3z"/></svg>' }});
-block('icon').mod('name', 'sort-down-2').mod('size', 's')({content: { html: '<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M2 3h12v2h-12v-2zM4 7h8v2h-8v-2zM10 11h-4v2h4v-2z"/></svg>' }});
-block('icon').mod('name', 'sort-down-2').mod('size', 'm')({content: { html: '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M10 18h4v-2h-4v2zm-7-12v2h18v-2h-18zm3 7h12v-2h-12v2z"/></svg>' }});

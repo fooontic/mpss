@@ -54,7 +54,8 @@
     "through2-filter": "^2.0.0",
     "whitepaper-bem": "^2.2.0",
     "whitepaper-logos": "^0.0.2",
-    "ym": "^0.1.2"
+    "ym": "^0.1.2",
+    "nozdrebombilnya-common": "^0.0.1"
   },
   "scripts": {
     "test": "enb make && enb make clean && gulp",
