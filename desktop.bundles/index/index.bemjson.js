@@ -25,102 +25,227 @@ module.exports = {
 					tag: 'section',
 					elem: 'section',
 					mix: { block: 'decorator', mods: { 'space-l': '2xl', 'space-r': 'xl' }},
-					content: [
-						{
-							tag: 'h2',
-							block: 'text',
-							mods: { size: 's', view: 'primary', transform: 'uppercase', spacing: 'xs' },
-							mix: { block: 'decorator', mods: { 'indent-t': 'l', 'indent-b': 'm' }},
-							content: 'Центральные происшествия'
-						},
-						{
-							tag: 'a',
-							attrs: { href: '#' },
-							block: 'central-event',
-							mix: { block: 'pt-card' },
-							content: [
-								{
-									elem: 'content',
-									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '2xl' }, },
-									content: {
-										block: 'text',
-										mods: { size: 'xl', view: 'primary', 'line-height': 'm' },
-										mix: { block: 'central-event', elem: 'title' },
-										content: 'Общеприменимые сценарии'
+					content: {
+						elem: 'container',
+						elemMods: { size: 'xs' },
+						content: [
+							{
+								tag: 'h2',
+								block: 'text',
+								mods: { size: 's', view: 'primary', transform: 'uppercase', spacing: 'xs' },
+								mix: { block: 'decorator', mods: { 'indent-t': '2xl', 'indent-b': 'm' }},
+								content: 'Центральные происшествия'
+							},
+							{
+								tag: 'a',
+								attrs: { href: '#' },
+								block: 'central-event',
+								mix: { block: 'pt-card' },
+								content: [
+									{
+										elem: 'content',
+										mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '2xl' }, },
+										content: {
+											block: 'text',
+											mods: { size: 'xl', view: 'primary', 'line-height': 'm' },
+											mix: { block: 'central-event', elem: 'title' },
+											content: 'Общеприменимые сценарии'
+										},
 									},
-								},
-								{
-									elem: 'footer',
-									mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-h': 'l', 'space-v': 's', 'distribute': 'right' }, },
-									content: {
-										block: 'text',
-										mods: { size: 'xl', view: 'ghost' },
-										content: '9'
+									{
+										elem: 'footer',
+										mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-h': 'l', 'space-v': 's', 'distribute': 'right' }, },
+										content: {
+											block: 'text',
+											mods: { size: 'xl', view: 'ghost' },
+											content: '9'
+										},
 									},
-								},
-							]
-						},
-						{
-							tag: 'a',
-							attrs: { href: '#' },
-							block: 'central-event',
-							mods: { state: 'active' },
-							mix: { block: 'pt-card' },
-							content: [
-								{
-									elem: 'content',
-									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '2xl' }, },
-									content: {
-										block: 'text',
-										mods: { size: 'xl', view: 'primary', 'line-height': 'm' },
-										mix: { block: 'central-event', elem: 'title' },
-										content: 'Блоковые сценарии'
+								]
+							},
+							{
+								tag: 'a',
+								attrs: { href: '#' },
+								block: 'central-event',
+								mods: { state: 'active' },
+								mix: { block: 'pt-card' },
+								content: [
+									{
+										elem: 'content',
+										mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '2xl' }, },
+										content: {
+											block: 'text',
+											mods: { size: 'xl', view: 'primary', 'line-height': 'm' },
+											mix: { block: 'central-event', elem: 'title' },
+											content: 'Блоковые сценарии'
+										},
 									},
-								},
-								{
-									elem: 'footer',
-									mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-h': 'l', 'space-v': 's', 'distribute': 'right' }, },
-									content: {
-										block: 'text',
-										mods: { size: 'xl', view: 'ghost' },
-										content: '9'
+									{
+										elem: 'footer',
+										mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-h': 'l', 'space-v': 's', 'distribute': 'right' }, },
+										content: {
+											block: 'text',
+											mods: { size: 'xl', view: 'ghost' },
+											content: '6'
+										},
 									},
-								},
-							]
-						},
-						{
-							tag: 'a',
-							attrs: { href: '#' },
-							block: 'central-event',
-							mix: { block: 'pt-card' },
-							content: [
-								{
-									elem: 'content',
-									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '2xl' }, },
-									content: {
-										block: 'text',
-										mods: { size: 'xl', view: 'primary', 'line-height': 'm' },
-										mix: { block: 'central-event', elem: 'title' },
-										content: 'Техногенная безопасность'
+								]
+							},
+							{
+								tag: 'a',
+								attrs: { href: '#' },
+								block: 'central-event',
+								mix: { block: 'pt-card' },
+								content: [
+									{
+										elem: 'content',
+										mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '2xl' }, },
+										content: {
+											block: 'text',
+											mods: { size: 'xl', view: 'primary', 'line-height': 'm' },
+											mix: { block: 'central-event', elem: 'title' },
+											content: 'Техногенная безопасность'
+										},
 									},
-								},
-								{
-									elem: 'footer',
-									mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-h': 'l', 'space-v': 's', 'distribute': 'right' }, },
-									content: {
-										block: 'text',
-										mods: { size: 'xl', view: 'ghost' },
-										content: '9'
+									{
+										elem: 'footer',
+										mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-h': 'l', 'space-v': 's', 'distribute': 'right' }, },
+										content: {
+											block: 'text',
+											mods: { size: 'xl', view: 'ghost' },
+											content: '16'
+										},
 									},
-								},
-							]
-						},
-					]
+								]
+							},
+						]
+					}
 				},
 				{
 					elem: 'section',
 					attrs: { style: 'background: var(--color-bg-stripe);' },
-					content: ''
+					mix: { block: 'decorator', mods: { 'space-h': 'xl' }},
+					content: {
+						elem: 'container',
+						elemMods: { size: 'xs' },
+						content: [
+							{
+								tag: 'h2',
+								block: 'text',
+								mods: { size: 's', view: 'primary', transform: 'uppercase', spacing: 'xs' },
+								mix: { block: 'decorator', mods: { 'indent-t': '2xl', 'indent-b': 'm' }},
+								content: 'Кластерные происшествия'
+							},
+							{
+								block: 'pt-list',
+								mods: { 'space-a': 's', 'vertical-align': 'baseline', distribute: 'between' },
+								content: [
+									{
+										elem: 'item',
+										mix: { block: 'cluster-event' },
+										content: [
+											{
+												block: 'text',
+												mods: { size: 'l', view: 'primary' },
+												mix: { block: 'cluster-event', elem: 'title' },
+												content: 'Пожарная безопасность'
+											},
+											{
+												block: 'text',
+												mods: { size: 'm', view: 'ghost' },
+												content: '2'
+											},
+										]
+									},
+									{
+										elem: 'item',
+										mix: { block: 'cluster-event' },
+										content: [
+											{
+												block: 'text',
+												mods: { size: 'l', view: 'primary' },
+												mix: { block: 'cluster-event', elem: 'title' },
+												content: 'Пожарная безопасность'
+											},
+											{
+												block: 'text',
+												mods: { size: 'm', view: 'ghost' },
+												content: '2'
+											},
+										]
+									},
+									{
+										elem: 'item',
+										mix: { block: 'cluster-event', mods: { state: 'active' } },
+										content: [
+											{
+												block: 'text',
+												mods: { size: 'l', view: 'primary' },
+												mix: { block: 'cluster-event', elem: 'title' },
+												content: 'Сложный технологический объект'
+											},
+											{
+												block: 'text',
+												mods: { size: 'm', view: 'ghost' },
+												content: '3'
+											},
+										]
+									},
+									{
+										elem: 'item',
+										mix: { block: 'cluster-event' },
+										content: [
+											{
+												block: 'text',
+												mods: { size: 'l', view: 'primary' },
+												mix: { block: 'cluster-event', elem: 'title' },
+												content: 'Сероводород'
+											},
+											{
+												block: 'text',
+												mods: { size: 'm', view: 'ghost' },
+												content: '2'
+											},
+										]
+									},
+									{
+										elem: 'item',
+										mix: { block: 'cluster-event' },
+										content: [
+											{
+												block: 'text',
+												mods: { size: 'l', view: 'primary' },
+												mix: { block: 'cluster-event', elem: 'title' },
+												content: 'Разливы нефтепродуктов'
+											},
+											{
+												block: 'text',
+												mods: { size: 'm', view: 'ghost' },
+												content: '2'
+											},
+										]
+									},
+									{
+										elem: 'item',
+										mix: { block: 'cluster-event' },
+										content: [
+											{
+												block: 'text',
+												mods: { size: 'l', view: 'primary' },
+												mix: { block: 'cluster-event', elem: 'title' },
+												content: 'Авария на платформе'
+											},
+											{
+												block: 'text',
+												mods: { size: 'm', view: 'ghost' },
+												content: '3'
+											},
+										]
+									},
+								]
+							},
+						]
+					}
 				},
 				{
 					elem: 'section',

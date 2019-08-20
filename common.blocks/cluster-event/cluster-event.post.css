@@ -1,0 +1,37 @@
+.cluster-event {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin-bottom: var(--space-3xs);
+	border-radius: var(--space-2xs);
+	background-color: transparent;
+	text-decoration: none;
+	transition: background-color .2s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--color-bg-default);
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0; top: 0;
+		display: block;
+		width: var(--space-2xs);
+		height: 100%;
+		background: var(--color-bg-link);
+		transform: translateX(-100%);
+	}
+
+	&_state {
+		&_active {
+			pointer-events: none;
+			background-color: var(--color-bg-default);
+
+			&::before {
+				transform: translateX(0);
+			}
+		}
+	}
+}

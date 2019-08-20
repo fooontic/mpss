@@ -65,7 +65,7 @@ block('header').content()(function() {
 				{
 					block: 'search',
 					size: 'm',
-					placeholder: 'Поиск по всему интарнету',
+					placeholder: 'Поиск модели',
 					mix: { block: 'decorator', mods: { 'indent-r': '3xl' } }
 				},
 				// {
