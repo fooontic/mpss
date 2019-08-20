@@ -1,0 +1,5 @@
+.tpl-layout_structure_mpss {
+	display: grid;
+	grid-template-columns: 320px 440px auto;
+	grid-template-rows: minmax(100vh, auto);
+}

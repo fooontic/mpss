@@ -1,7 +1,7 @@
 ([
 	{
 		mustDeps: [
-			{ block: 'decorator', mods: { 'space-h': '2xl', 'space-v': 's', 'indent-r': '3xl', 'indent-l': ['xs', 'xl' ] } },
+			{ block: 'decorator', mods: { 'space-h': '2xl', 'space-v': 's', 'indent-r': ['2xl', '3xl', '5xl'], 'indent-l': ['xs', 'xl' ] } },
 			{ block: 'search' },
 			{ block: 'icon', mods: { size: 'm', view: 'primary', name: ['chat', 'mail', 'hamburger'] } },
 			{ block: 'user' },

@@ -1,4 +1,4 @@
-block('header')({ addMix: [{ block: 'decorator', mods: { 'space-h': '2xl', 'space-v': 's' } }] });
+block('header')({ addMix: [{ block: 'decorator', mods: { 'space-h': '2xl' } }] });
 block('header').tag()('header');
 block('header').content()(function() {
 	let _ctx = this.ctx;
@@ -10,7 +10,7 @@ block('header').content()(function() {
 				{
 					block: 'pt-icon-plus',
 					mods: { 'vertical-align': 'center' },
-					mix: { block: 'decorator', mods: { 'indent-r': '3xl' } },
+					mix: { block: 'decorator', mods: { 'indent-r': '5xl' } },
 					content: [
 						// {
 						// 	tag: 'a',
@@ -32,7 +32,10 @@ block('header').content()(function() {
 					attrs: { href: '#' },
 					block: 'text',
 					mods: { size: 'm', view: 'link' },
-					mix: { block: 'decorator', mods: { 'indent-r': '3xl' }},
+					mix: [
+						{ block: 'decorator', mods: { 'indent-r': '2xl' }},
+						{ block: 'header', elem: 'item', elemMods: { state: 'active' }, }
+					],
 					content: 'Модели'
 				},
 				{
@@ -40,6 +43,10 @@ block('header').content()(function() {
 					// attrs: { href: '#' },
 					block: 'text',
 					mods: { size: 'm', view: 'link', display: 'inline-block' },
+					mix: [
+						{ block: 'decorator', mods: { 'indent-r': '2xl' }},
+						{ block: 'header', elem: 'item' }
+					],
 					content: [
 						'Объекты',
 						{
@@ -78,7 +85,7 @@ block('header').content()(function() {
 					block: 'user',
 					size: 'm',
 					name: 'Алефтина Сергеева',
-					status: 'away',
+					// status: 'away',
 				}
 			]
 		}
