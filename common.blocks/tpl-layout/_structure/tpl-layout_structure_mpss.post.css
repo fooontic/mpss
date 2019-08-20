@@ -2,4 +2,22 @@
 	display: grid;
 	grid-template-columns: 320px 440px auto;
 	grid-template-rows: minmax(calc(100vh - var(--header-height)), auto);
+
+	.tpl-layout {
+		&__section {
+			position: relative;
+			&:nth-child(1) {
+				z-index: 3;
+				background: var(--color-bg-default);
+			}
+			&:nth-child(2) {
+				z-index: 2;
+				background: linear-gradient(var(--color-bg-stripe) 0%, var(--color-bg-stripe) 100%), linear-gradient(white 0%, white 100%);
+			}
+			&:nth-child(3) {
+				z-index: 1;
+				background: var(--color-bg-ghost);
+			}
+		}
+	}
 }

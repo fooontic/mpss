@@ -20,7 +20,10 @@ module.exports = {
 		{
 			block: 'tpl-layout',
 			mods: { structure: 'mpss' },
+			mix: { block: 'main-page', mods: { models: true }, },
 			content: [
+
+
 				{
 					tag: 'section',
 					elem: 'section',
@@ -32,13 +35,11 @@ module.exports = {
 							{
 								tag: 'h2',
 								block: 'text',
-								mods: { size: 's', view: 'primary', transform: 'uppercase', spacing: 'xs' },
+								mods: { size: 's', view: 'secondary', transform: 'uppercase', spacing: 'xs' },
 								mix: { block: 'decorator', mods: { 'indent-t': '2xl', 'indent-b': 'm' }},
 								content: 'Центральные происшествия'
 							},
 							{
-								tag: 'a',
-								attrs: { href: '#' },
 								block: 'central-event',
 								mix: { block: 'pt-card' },
 								content: [
@@ -64,10 +65,8 @@ module.exports = {
 								]
 							},
 							{
-								tag: 'a',
-								attrs: { href: '#' },
 								block: 'central-event',
-								mods: { state: 'active' },
+								// mods: { state: 'active' },
 								mix: { block: 'pt-card' },
 								content: [
 									{
@@ -92,8 +91,6 @@ module.exports = {
 								]
 							},
 							{
-								tag: 'a',
-								attrs: { href: '#' },
 								block: 'central-event',
 								mix: { block: 'pt-card' },
 								content: [
@@ -121,10 +118,14 @@ module.exports = {
 						]
 					}
 				},
+
+
 				{
 					elem: 'section',
-					attrs: { style: 'background: var(--color-bg-stripe);' },
-					mix: { block: 'decorator', mods: { 'space-h': 'xl' }},
+					mix: [
+						{ block: 'decorator', mods: { 'space-h': 'xl' }},
+						{ block: 'main-page', elem: 'cluster-events', elemMods: { state: 'closed' }, }
+					],
 					content: {
 						elem: 'container',
 						elemMods: { size: 'xs' },
@@ -132,8 +133,8 @@ module.exports = {
 							{
 								tag: 'h2',
 								block: 'text',
-								mods: { size: 's', view: 'primary', transform: 'uppercase', spacing: 'xs' },
-								mix: { block: 'decorator', mods: { 'indent-t': '2xl', 'indent-b': 'm' }},
+								mods: { size: 's', view: 'secondary', transform: 'uppercase', spacing: 'xs' },
+								mix: { block: 'decorator', mods: { 'indent-t': '2xl', 'indent-b': 'm', 'space-l': 's' }},
 								content: 'Кластерные происшествия'
 							},
 							{
@@ -176,7 +177,7 @@ module.exports = {
 									},
 									{
 										elem: 'item',
-										mix: { block: 'cluster-event', mods: { state: 'active' } },
+										mix: { block: 'cluster-event' },
 										content: [
 											{
 												block: 'text',
@@ -247,19 +248,50 @@ module.exports = {
 						]
 					}
 				},
+
+
 				{
 					elem: 'section',
-					attrs: { style: 'background: var(--color-bg-ghost);' },
+					mix: [
+						{ block: 'decorator', mods: { 'space-l': 'xl', 'space-r': '2xl' }},
+						{ block: 'main-page', elem: 'scenario-events', elemMods: { state: 'closed' }, }
+					],
 					content: {
 						elem: 'container',
 						elemMods: { size: 'xs', distribute: 'center' },
 						content: [
 							{
-								tag: 'h2',
-								block: 'text',
-								mods: { size: 's', view: 'primary', transform: 'uppercase', spacing: 'xs' },
-								mix: { block: 'decorator', mods: { 'indent-t': '2xl', 'indent-b': 'm' }},
-								content: 'Сценарные происшествия'
+								block: 'pt-icon-plus',
+								mods: { 'vertical-align': 'center', distribute: 'between' },
+								mix: { block: 'decorator', mods: { 'indent-t': 'xl', 'indent-b': 's' }},
+								content: [
+									{
+										tag: 'h2',
+										block: 'text',
+										mods: { size: 's', view: 'secondary', transform: 'uppercase', spacing: 'xs' },
+										mix: { block: 'decorator', mods: { 'indent-v': 'none' }},
+										content: 'Сценарные происшествия'
+									},
+									{
+										block: 'button',
+										mods: { size: 's', view: 'primary' },
+										content: '+ Новая модель'
+									}
+								]
+							},
+							{
+								block: 'loader-container',
+								attrs: { style:
+									`position: absolute; 
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									width: 100%; height: 200px;` },
+								content: {
+									block: 'loader',
+									mods: { size: 'm' },
+									content: { elem: 'dot' },
+								},
 							},
 							{
 								block: 'scenario-event',
@@ -267,7 +299,7 @@ module.exports = {
 								content: [
 									{
 										elem: 'content',
-										mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '2xl' }, },
+										mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '5xl' }, },
 										content: [
 											{
 												block: 'text',
@@ -306,7 +338,7 @@ module.exports = {
 								content: [
 									{
 										elem: 'content',
-										mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '2xl' }, },
+										mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '5xl' }, },
 										content: [
 											{
 												block: 'text',
@@ -345,7 +377,7 @@ module.exports = {
 								content: [
 									{
 										elem: 'content',
-										mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '2xl' }, },
+										mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '5xl' }, },
 										content: [
 											{
 												block: 'text',

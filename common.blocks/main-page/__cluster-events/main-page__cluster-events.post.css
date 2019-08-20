@@ -1,0 +1,27 @@
+.main-page__cluster-events {
+	transition: transform .32s;
+	transform-origin: center left;
+
+	&_state_closed {
+		transform: translateX(-110%);
+
+		.cluster-event {
+			opacity: 0;
+			transform: translateY(var(--space-s));
+		}
+	}
+
+	&_state_opened {
+		transform: translateX(0);
+		.cluster-event {
+			opacity: 1;
+			transform: translateY(0);
+			transition: opacity .4s, transform .4s;
+			transition-delay: .32s;
+
+			&:nth-last-child(1) {transition-delay: .44s;}
+			&:nth-last-child(2) {transition-delay: .40s;}
+			&:nth-last-child(3) {transition-delay: .36s;}
+		}
+	}
+}
