@@ -53,7 +53,7 @@
 
   &_view_default {
     background: var(--color-control-input-default);
-    border: 2px solid var(--color-control-bg-border-default);
+    border: var(--control-border-width) solid var(--color-control-bg-border-default);
     border-radius: var(--control-radius);
     color: var(--color-control-typo-primary);
 

@@ -11,6 +11,9 @@
 
 	&:hover {
 		background-color: var(--color-bg-default);
+		.cluster-event__title {
+			color: var(--color-link);
+		}
 	}
 
 	&::before {
@@ -31,6 +34,9 @@
 
 			&::before {
 				transform: translateX(0);
+			}
+			.cluster-event__title {
+				color: var(--color-link);
 			}
 		}
 	}

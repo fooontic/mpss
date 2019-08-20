@@ -250,7 +250,136 @@ module.exports = {
 				{
 					elem: 'section',
 					attrs: { style: 'background: var(--color-bg-ghost);' },
-					content: ''
+					content: {
+						elem: 'container',
+						elemMods: { size: 'xs', distribute: 'center' },
+						content: [
+							{
+								tag: 'h2',
+								block: 'text',
+								mods: { size: 's', view: 'primary', transform: 'uppercase', spacing: 'xs' },
+								mix: { block: 'decorator', mods: { 'indent-t': '2xl', 'indent-b': 'm' }},
+								content: 'Сценарные происшествия'
+							},
+							{
+								block: 'scenario-event',
+								mix: { block: 'pt-card' },
+								content: [
+									{
+										elem: 'content',
+										mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '2xl' }, },
+										content: [
+											{
+												block: 'text',
+												mods: { size: 'xs', view: 'secondary' },
+												mix: { block: 'decorator', mods: { 'indent-b': '2xs' }},
+												content: 'Последнее изменение: 02.09.2019'
+											},
+											{
+												block: 'text',
+												mods: { size: 'xl', view: 'primary', 'line-height': 'm' },
+												mix: { block: 'scenario-event', elem: 'title' },
+												content: 'Пожар/взрыв: разгерметизация насосно-компрессорного оборудования'
+											},
+										]
+									},
+									{
+										elem: 'footer',
+										mix: { block: 'pt-card', elem: 'footer', elemMods: { distribute: 'between', 'space-v': 'm', 'space-h': 'xl' }, },
+										content: [
+											{
+												block: 'cards-tags',
+												content: {
+													elem: 'tag',
+													elemMods: { color: 'normal' },
+													content: '44 проекта'
+												},
+											},
+											{ block: 'icon', mods: { name: 'forward', size: 'm', view: 'link' }, mix: { block: 'scenario-event', elem: 'arrow' },},
+										]
+									},
+								]
+							},
+							{
+								block: 'scenario-event',
+								mix: { block: 'pt-card' },
+								content: [
+									{
+										elem: 'content',
+										mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '2xl' }, },
+										content: [
+											{
+												block: 'text',
+												mods: { size: 'xs', view: 'secondary' },
+												mix: { block: 'decorator', mods: { 'indent-b': '2xs' }},
+												content: 'Последнее изменение: 02.09.2019'
+											},
+											{
+												block: 'text',
+												mods: { size: 'xl', view: 'primary', 'line-height': 'm' },
+												mix: { block: 'scenario-event', elem: 'title' },
+												content: 'Пожар/взрыв: разгерметизация трубопроводов, колонн и печей'
+											},
+										]
+									},
+									{
+										elem: 'footer',
+										mix: { block: 'pt-card', elem: 'footer', elemMods: { distribute: 'between', 'space-v': 'm', 'space-h': 'xl' }, },
+										content: [
+											{
+												block: 'cards-tags',
+												content: {
+													elem: 'tag',
+													elemMods: { color: 'normal' },
+													content: 'Вся компания'
+												},
+											},
+											{ block: 'icon', mods: { name: 'forward', size: 'm', view: 'link' }, mix: { block: 'scenario-event', elem: 'arrow' },},
+										]
+									},
+								]
+							},
+							{
+								block: 'scenario-event',
+								mix: { block: 'pt-card' },
+								content: [
+									{
+										elem: 'content',
+										mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '2xl' }, },
+										content: [
+											{
+												block: 'text',
+												mods: { size: 'xs', view: 'secondary' },
+												mix: { block: 'decorator', mods: { 'indent-b': '2xs' }},
+												content: 'Последнее изменение: 02.09.2019'
+											},
+											{
+												block: 'text',
+												mods: { size: 'xl', view: 'primary', 'line-height': 'm' },
+												mix: { block: 'scenario-event', elem: 'title' },
+												content: 'Пожар/взрыв: на резервуаре с взрывопожароопасными жидкостями'
+											},
+										]
+									},
+									{
+										elem: 'footer',
+										mix: { block: 'pt-card', elem: 'footer', elemMods: { distribute: 'between', 'space-v': 'm', 'space-h': 'xl' }, },
+										content: [
+											{
+												block: 'cards-tags',
+												content: {
+													elem: 'tag',
+													elemMods: { color: 'normal' },
+													content: '72 проекта'
+												},
+											},
+											{ block: 'icon', mods: { name: 'forward', size: 'm', view: 'link' }, mix: { block: 'scenario-event', elem: 'arrow' },},
+										]
+									},
+								]
+							},
+						]
+					}
 				},
 			]
 		},

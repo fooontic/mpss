@@ -1,5 +1,8 @@
-.header {
+:root {
 	--header-height: 65px;
+}
+
+.header {
 	position: sticky;
 	position: -webkit-sticky;
 	top: 0;
