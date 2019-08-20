@@ -1,41 +1,86 @@
 const clusterEventsList = document.querySelector('.main-page__cluster-events');
 const scenarioEventsList = document.querySelector('.main-page__scenario-events');
+const scenarioEmpty = document.querySelector('.scenario-empty');
+const scenarioEmptyText = scenarioEmpty.querySelector('.scenario-empty__text');
+const scenarioEmptyLoader = scenarioEmpty.querySelector('.scenario-empty__loader');
 
 let centralEventsItems = document.querySelectorAll('.central-event');
 let clusterEventsItems = document.querySelectorAll('.cluster-event');
 let scenarioEventsItems = document.querySelectorAll('.scenario-event');
 
-const openClusterListHandler = function (evt) {
+const showClusterList = () => {
+	clusterEventsList.classList.add('main-page__cluster-events_show-list')
+}
+
+const showScenarioList = () => {
+	scenarioEventsList.classList.add('main-page__scenario-events_show-list')
+}
+
+const hideScenarioList = () => {
+	scenarioEventsList.classList.remove('main-page__scenario-events_show-list')
+}
+
+
+const toggleClusterList = () => {
+	clusterEventsList.classList.remove('main-page__cluster-events_show-list');
+	setTimeout(showClusterList, 150);
+}
+
+const toggleScenarioList = () => {
+	scenarioEventsList.classList.remove('main-page__scenario-events_show-list');
+	setTimeout(showScenarioList, 150);
+}
+
+const showLoader = () => {
+	scenarioEmptyText.style.display = 'none';
+	scenarioEmptyLoader.style.display = 'block';
+}
+
+const hideLoader = () => {
+	scenarioEmptyText.style.display = 'block';
+	scenarioEmptyLoader.style.display = 'none';
+}
+
+
+const openEventsListHandler = (evt) => {
+	let clickedElement = evt.currentTarget;
+
 	for ( var i = 0; i < centralEventsItems.length; i++ ) {
 		centralEventsItems[i].classList.remove('central-event_state_active');
 	}
-
-	let clickedElement = evt.currentTarget;
 	clickedElement.classList.add('central-event_state_active');
+
 	clusterEventsList.classList.remove('main-page__cluster-events_state_closed');
 	clusterEventsList.classList.add('main-page__cluster-events_state_opened');
+
+	toggleClusterList();
+	hideScenarioList();
+	hideLoader();
 }
 
-const openScenarioListHandler = function (evt) {
+
+const showScenarioListHandler = (evt) => {
+	let clickedElement = evt.currentTarget;
+
 	for ( var i = 0; i < clusterEventsItems.length; i++ ) {
 		clusterEventsItems[i].classList.remove('cluster-event_state_active');
 	}
-
-	let clickedElement = evt.currentTarget;
 	clickedElement.classList.add('cluster-event_state_active');
-	scenarioEventsList.classList.remove('main-page__scenario-events_state_closed');
-	scenarioEventsList.classList.add('main-page__scenario-events_state_opened');
+
+	showLoader();
+	toggleScenarioList();
 }
 
-const listenToCentralItems = function () {
+
+const listenToCentralItems = () => {
 	for ( var i = 0; i < centralEventsItems.length; i++ ) {
-		centralEventsItems[i].addEventListener('click', openClusterListHandler)
+		centralEventsItems[i].addEventListener('click', openEventsListHandler)
 	}
 };
 
-const listenToClusterItems = function () {
+const listenToClusterItems = () => {
 	for ( var i = 0; i < clusterEventsItems.length; i++ ) {
-		clusterEventsItems[i].addEventListener('click', openScenarioListHandler)
+		clusterEventsItems[i].addEventListener('click', showScenarioListHandler)
 	}
 };
 

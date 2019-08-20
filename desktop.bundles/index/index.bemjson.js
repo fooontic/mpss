@@ -273,6 +273,7 @@ module.exports = {
 										content: 'Сценарные происшествия'
 									},
 									{
+										tag: 'button',
 										block: 'button',
 										mods: { size: 's', view: 'primary' },
 										content: '+ Новая модель'
@@ -280,18 +281,21 @@ module.exports = {
 								]
 							},
 							{
-								block: 'loader-container',
-								attrs: { style:
-									`position: absolute; 
-									display: flex;
-									align-items: center;
-									justify-content: center;
-									width: 100%; height: 200px;` },
-								content: {
-									block: 'loader',
-									mods: { size: 'm' },
-									content: { elem: 'dot' },
-								},
+								block: 'scenario-empty',
+								content: [
+									{
+										block: 'text',
+										mods: { size: 'm', view: 'secondary', align: 'center' },
+										mix: { block: 'scenario-empty', elem: 'text' },
+										content: 'Выберите кластерное происшествия для просмотра списка моделей.'
+									},
+									{
+										block: 'loader',
+										mods: { size: 'm' },
+										mix: { block: 'scenario-empty', elem: 'loader' },
+										content: { elem: 'dot' },
+									},
+								]
 							},
 							{
 								block: 'scenario-event',

@@ -1,0 +1,18 @@
+.scenario-empty {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 200px;
+	box-sizing: border-box;
+
+	&__text {
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	&__loader {
+		display: none;
+	}
+}

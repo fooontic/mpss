@@ -1,18 +1,27 @@
 .main-page__cluster-events {
-	transition: transform .32s;
+	transition: transform .32s ease-out;
 	transform-origin: center left;
 
-	&_state_closed {
-		transform: translateX(-110%);
-
-		.cluster-event {
-			opacity: 0;
-			transform: translateY(var(--space-s));
-		}
+	.cluster-event {
+		opacity: 0;
+		transform: translateY(var(--space-s));
 	}
 
-	&_state_opened {
+	&_state_closed, &_state_closed + .main-page__scenario-events {
+		transform: translateX(-110%);
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+	}
+
+	&_state_opened, &_state_opened + .main-page__scenario-events {
 		transform: translateX(0);
+		opacity: 1;
+		pointer-events: auto;
+		visibility: visible;
+	}
+
+	&_show-list {
 		.cluster-event {
 			opacity: 1;
 			transform: translateY(0);
