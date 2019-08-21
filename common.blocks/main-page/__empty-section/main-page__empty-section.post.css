@@ -1,0 +1,14 @@
+.main-page__empty-section {
+	display: none;
+	position: absolute !important;
+	left: 320px;
+	top: var(--header-height);
+	width: calc(100% - 340px);
+	height: calc(100% - var(--header-height));
+	justify-content: center;
+	align-items: center;
+
+	&_state_visible {
+		display: flex;
+	}
+}

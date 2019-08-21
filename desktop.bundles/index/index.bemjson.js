@@ -417,6 +417,42 @@ module.exports = {
 						]
 					}
 				},
+
+
+				{
+					elem: 'section',
+					mix: [
+						{ block: 'decorator', mods: { 'space-h': 'xl' }},
+						{ block: 'main-page', elem: 'empty-section', elemMods: { state: 'visible' }, }
+					],
+					content: {
+						elem: 'container',
+						elemMods: { size: 'xs', distribute: 'center' },
+						attrs: { style: 'text-align: center' },
+						content: [
+							{
+								tag: 'img',
+								block: 'image',
+								mix: { block: 'decorator', mods: { 'indent-h': 'auto', 'indent-b': '4xl' }},
+								attrs: { src: '../../assets/illustration.svg' },
+							},
+							{
+								block: 'text',
+								mods: { size: 'l', view: 'primary', 'line-height': 'm', align: 'center' },
+								mix: { block: 'decorator', mods: { 'indent-h': 'auto', 'indent-b': 'xl' }},
+								attrs: { style: 'max-width: 320px' },
+								content: 'Выберите модель, которую хотите просмотреть или создайте новую.'
+							},
+							{
+								tag: 'button',
+								block: 'button',
+								mods: { size: 'xl', view: 'primary' },
+								mix: { block: 'decorator', mods: { 'indent-h': 'auto', 'indent-b': '3xl' }},
+								content: 'Создать новую модель'
+							},
+						]
+					}
+				},
 			]
 		},
 	]

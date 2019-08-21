@@ -3,6 +3,7 @@ const scenarioEventsList = document.querySelector('.main-page__scenario-events')
 const scenarioEmpty = document.querySelector('.scenario-empty');
 const scenarioEmptyText = scenarioEmpty.querySelector('.scenario-empty__text');
 const scenarioEmptyLoader = scenarioEmpty.querySelector('.scenario-empty__loader');
+const emptySection = document.querySelector('.main-page__empty-section');
 
 let centralEventsItems = document.querySelectorAll('.central-event');
 let clusterEventsItems = document.querySelectorAll('.cluster-event');
@@ -49,6 +50,8 @@ const openEventsListHandler = (evt) => {
 		centralEventsItems[i].classList.remove('central-event_state_active');
 	}
 	clickedElement.classList.add('central-event_state_active');
+
+	emptySection.classList.remove('main-page__empty-section_state_visible');
 
 	clusterEventsList.classList.remove('main-page__cluster-events_state_closed');
 	clusterEventsList.classList.add('main-page__cluster-events_state_opened');
