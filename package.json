@@ -40,6 +40,7 @@
     "gulp-string-replace": "^1.1.2",
     "gulp-uglify": "^3.0.2",
     "merge2": "^1.2.2",
+    "nozdrebombilnya-common": "^0.0.1",
     "postcss-calc": "^6.0.2",
     "postcss-color-function": "^4.0.0",
     "postcss-each": "^0.10.0",
@@ -51,10 +52,9 @@
     "postcss-simple-vars": "^4.0.0",
     "postcss-url": "^8.0.0",
     "through2-filter": "^2.0.0",
-    "whitepaper-bem": "^2.2.0",
+    "whitepaper-bem": "^2.3.2",
     "whitepaper-logos": "^0.0.2",
-    "ym": "^0.1.2",
-    "nozdrebombilnya-common": "^0.0.1"
+    "ym": "^0.1.2"
   },
   "scripts": {
     "test": "enb make && enb make clean && gulp",
