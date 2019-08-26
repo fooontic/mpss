@@ -14,7 +14,11 @@ const showClusterList = () => {
 }
 
 const showScenarioList = () => {
-	scenarioEventsList.classList.add('main-page__scenario-events_show-list')
+	scenarioEventsList.classList.add('main-page__scenario-events_show-list');
+	scenarioEventsList.classList.add('main-page__scenario-events_animated');
+	setTimeout( () => {
+		scenarioEventsList.classList.remove('main-page__scenario-events_animated');
+	}, 2000);
 }
 
 const hideScenarioList = () => {
@@ -55,6 +59,8 @@ const openEventsListHandler = (evt) => {
 
 	clusterEventsList.classList.remove('main-page__cluster-events_state_closed');
 	clusterEventsList.classList.add('main-page__cluster-events_state_opened');
+	scenarioEventsList.classList.remove('main-page__scenario-events_state_closed');
+	scenarioEventsList.classList.add('main-page__scenario-events_state_opened');
 
 	toggleClusterList();
 	hideScenarioList();

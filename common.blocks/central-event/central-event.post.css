@@ -43,6 +43,7 @@
 	}
 
 	&:hover {
+		cursor: pointer;
 		box-shadow:
 			0 2px 4px rgba(var(--color-nums-shadow), 0.08),
 			0 12px 22px -8px rgba(var(--color-nums-shadow), 0.32);
