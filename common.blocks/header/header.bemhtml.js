@@ -28,6 +28,12 @@ block('header').content()(function() {
 					]
 				},
 				{
+					block: 'search',
+					size: 'm',
+					placeholder: 'Поиск модели',
+					mix: { block: 'decorator', mods: { 'indent-r': '3xl' } }
+				},
+				{
 					tag: 'a',
 					attrs: { href: '#' },
 					block: 'text',
@@ -38,36 +44,30 @@ block('header').content()(function() {
 					],
 					content: 'Модели'
 				},
-				{
-					// tag: 'a',
-					// attrs: { href: '#' },
-					block: 'text',
-					mods: { size: 'm', view: 'link', display: 'inline-block' },
-					mix: [
-						{ block: 'decorator', mods: { 'indent-r': '2xl' }},
-						{ block: 'header', elem: 'item' }
-					],
-					content: [
-						'Объекты',
-						{
-							block: 'text',
-							mods: { size: 'xs', view: 'ghost', transform: 'uppercase', display: 'inline-block' },
-							mix: { block: 'decorator', mods: { 'indent-l': 'xs' }},
-							content: 'Скоро'
-						},
-					]
-				},
+				// {
+				// 	// tag: 'a',
+				// 	// attrs: { href: '#' },
+				// 	block: 'text',
+				// 	mods: { size: 'm', view: 'Secondary', display: 'inline-block' },
+				// 	mix: [
+				// 		{ block: 'decorator', mods: { 'indent-r': '2xl' }},
+				// 		{ block: 'header', elem: 'item' }
+				// 	],
+				// 	content: [
+				// 		'Объекты',
+				// 		{
+				// 			block: 'text',
+				// 			mods: { size: 'xs', view: 'ghost', transform: 'uppercase', display: 'inline-block' },
+				// 			mix: { block: 'decorator', mods: { 'indent-l': 'xs' }},
+				// 			content: 'Скоро'
+				// 		},
+				// 	]
+				// },
 			]
 		},
 		{
 			elem: 'right-side',
 			content: [
-				{
-					block: 'search',
-					size: 'm',
-					placeholder: 'Поиск модели',
-					mix: { block: 'decorator', mods: { 'indent-r': '3xl' } }
-				},
 				// {
 				// 	tag: 'a',
 				// 	attrs: { href: '#' },
@@ -81,12 +81,21 @@ block('header').content()(function() {
 				// 	mods: { size: 'm', view: 'primary', name: 'mail' },
 				// 	mix: { block: 'decorator', mods: { 'indent-l': 'xl' } }
 				// },
+				// {
+				// 	block: 'user',
+				// 	size: 'm',
+				// 	name: 'Алефтина Сергеева',
+				// 	// status: 'away',
+				// }
 				{
-					block: 'user',
-					size: 'm',
-					name: 'Алефтина Сергеева',
-					// status: 'away',
-				}
+					tag: 'button',
+					block: 'button',
+					mods: { view: 'primary', size: 'm' },
+					content: [
+						{ block: 'icon', mods: { 'name': 'close' }},
+						'Создать новую модель'
+					]
+				},
 			]
 		}
 	]

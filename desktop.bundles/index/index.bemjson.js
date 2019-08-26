@@ -430,12 +430,6 @@ module.exports = {
 						elemMods: { size: 'xs', distribute: 'center' },
 						attrs: { style: 'text-align: center' },
 						content: [
-							// {
-							// 	tag: 'img',
-							// 	block: 'image',
-							// 	mix: { block: 'decorator', mods: { 'indent-h': 'auto', 'indent-b': '4xl' }},
-							// 	attrs: { src: '../../assets/illustration.svg' },
-							// },
 							{
 								block: 'image',
 								mix: { block: 'decorator', mods: { 'indent-h': 'auto', 'indent-b': '4xl' }},
