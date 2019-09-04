@@ -1,11 +1,15 @@
 .tpl-layout_structure_mpss {
 	display: grid;
 	grid-template-columns: 320px 440px auto;
-	grid-template-rows: minmax(calc(100vh - var(--header-height)), auto);
+	grid-template-rows: calc(100vh - var(--header-height));
+	overflow: hidden;
 
 	.tpl-layout {
 		&__section {
 			position: relative;
+			padding-bottom: var(--space-4xl);
+			overflow-y: auto;
+
 			&:nth-child(1) {
 				z-index: 3;
 				background: var(--color-bg-default);

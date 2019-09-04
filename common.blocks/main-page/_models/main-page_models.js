@@ -7,7 +7,10 @@ const emptySection = document.querySelector('.main-page__empty-section');
 
 let centralEventsItems = document.querySelectorAll('.central-event');
 let clusterEventsItems = document.querySelectorAll('.cluster-event');
-let scenarioEventsItems = document.querySelectorAll('.scenario-event');
+let scenarioEventsItems = scenarioEventsList.querySelectorAll('.scenario-event');
+let scenarioEventsInClusterList = clusterEventsList.querySelectorAll('.scenario-event');
+console.log(scenarioEventsItems);
+console.log(scenarioEventsInClusterList);
 
 const showClusterList = () => {
 	clusterEventsList.classList.add('main-page__cluster-events_show-list')
@@ -19,6 +22,12 @@ const showScenarioList = () => {
 	setTimeout( () => {
 		scenarioEventsList.classList.remove('main-page__scenario-events_animated');
 	}, 2000);
+}
+
+const showScenarioEventsInClusterList = () => {
+	for ( let i = 0; i < scenarioEventsInClusterList.length; i++ ) {
+		scenarioEventsInClusterList[i].classList.add('scenario-event_animated');
+	}
 }
 
 const hideScenarioList = () => {
@@ -65,6 +74,7 @@ const openEventsListHandler = (evt) => {
 	toggleClusterList();
 	hideScenarioList();
 	hideLoader();
+	showScenarioEventsInClusterList();
 }
 
 

@@ -8,7 +8,7 @@ module.exports = {
 		{ elem: 'css', url: 'index.min.css' },
 		{ elem: 'js', url: 'https://code.jquery.com/jquery-3.2.1.js' },
 	],
-	scripts: [{ elem: 'js', url: 'index.min.js' }],
+	scripts: [{ elem: 'js', url: 'index.js' }],
 	mix: {
 		block: 'theme',
 		mods: { color: 'gpn-default', control: 'gpn-default', space: 'default', breakpoint: 'default', space: 'default', size: 'gpn-default', gap: 'medium', font: 'gpn-default' }
@@ -22,7 +22,6 @@ module.exports = {
 			mods: { structure: 'mpss' },
 			mix: { block: 'main-page', mods: { models: true }, },
 			content: [
-
 
 				{
 					tag: 'section',
@@ -121,6 +120,7 @@ module.exports = {
 
 
 				{
+					tag: 'section',
 					elem: 'section',
 					mix: [
 						{ block: 'decorator', mods: { 'space-h': 'xl' }},
@@ -140,6 +140,7 @@ module.exports = {
 							{
 								block: 'pt-list',
 								mods: { 'space-a': 's', 'vertical-align': 'baseline', distribute: 'between' },
+								mix: { block: 'decorator', mods: { 'indent-b': '3xl' }},
 								content: [
 									{
 										elem: 'item',
@@ -245,12 +246,94 @@ module.exports = {
 									},
 								]
 							},
+
+
+							// Происшествия без кластера
+							{
+								block: 'scenario-event',
+								mix: { block: 'pt-card' },
+								content: [
+									{
+										elem: 'content',
+										mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '5xl' }, },
+										content: [
+											{
+												block: 'text',
+												mods: { size: 'xs', view: 'secondary' },
+												mix: { block: 'decorator', mods: { 'indent-b': '2xs' }},
+												content: 'Последнее изменение: 02.09.2019'
+											},
+											{
+												block: 'text',
+												mods: { size: 'xl', view: 'primary', 'line-height': 'm' },
+												mix: { block: 'scenario-event', elem: 'title' },
+												content: 'Происшествия без кластера'
+											},
+										]
+									},
+									{
+										elem: 'footer',
+										mix: { block: 'pt-card', elem: 'footer', elemMods: { distribute: 'between', 'space-v': 'm', 'space-h': 'xl' }, },
+										content: [
+											{
+												block: 'cards-tags',
+												content: {
+													elem: 'tag',
+													elemMods: { color: 'normal' },
+													content: '44 проекта'
+												},
+											},
+											{ block: 'icon', mods: { name: 'forward', size: 'm', view: 'link' }, mix: { block: 'scenario-event', elem: 'arrow' },},
+										]
+									},
+								]
+							},
+							{
+								block: 'scenario-event',
+								mix: { block: 'pt-card' },
+								content: [
+									{
+										elem: 'content',
+										mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'l', 'space-h': 'xl', 'space-b': '5xl' }, },
+										content: [
+											{
+												block: 'text',
+												mods: { size: 'xs', view: 'secondary' },
+												mix: { block: 'decorator', mods: { 'indent-b': '2xs' }},
+												content: 'Последнее изменение: 02.09.2019'
+											},
+											{
+												block: 'text',
+												mods: { size: 'xl', view: 'primary', 'line-height': 'm' },
+												mix: { block: 'scenario-event', elem: 'title' },
+												content: 'Пожар/взрыв: разгерметизация насосно-компрессорного оборудования'
+											},
+										]
+									},
+									{
+										elem: 'footer',
+										mix: { block: 'pt-card', elem: 'footer', elemMods: { distribute: 'between', 'space-v': 'm', 'space-h': 'xl' }, },
+										content: [
+											{
+												block: 'cards-tags',
+												content: {
+													elem: 'tag',
+													elemMods: { color: 'normal' },
+													content: '44 проекта'
+												},
+											},
+											{ block: 'icon', mods: { name: 'forward', size: 'm', view: 'link' }, mix: { block: 'scenario-event', elem: 'arrow' },},
+										]
+									},
+								]
+							},
 						]
 					}
 				},
 
 
 				{
+					tag: 'section',
 					elem: 'section',
 					mix: [
 						{ block: 'decorator', mods: { 'space-l': 'xl', 'space-r': '2xl' }},
@@ -420,6 +503,7 @@ module.exports = {
 
 
 				{
+					tag: 'section',
 					elem: 'section',
 					mix: [
 						{ block: 'decorator', mods: { 'space-h': 'xl' }},

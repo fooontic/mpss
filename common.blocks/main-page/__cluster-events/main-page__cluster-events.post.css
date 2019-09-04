@@ -33,4 +33,20 @@
 			&:nth-last-child(3) {transition-delay: .36s;}
 		}
 	}
+
+	.scenario-event {
+		opacity: 0;
+		transform: translateY(var(--space-l));
+		pointer-events: none;
+		visibility: hidden;
+
+		&_animated {
+			opacity: 1;
+			transform: translateY(0);
+			transition: opacity .4s, transform .4s;
+			transition-delay: .6s;
+			visibility: visible;
+			pointer-events: auto;
+		}
+	}
 }
